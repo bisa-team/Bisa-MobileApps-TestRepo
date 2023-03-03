@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
 
-class login extends StatelessWidget {
-  const login({Key? key}) : super(key: key);
+class Register extends StatelessWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +59,7 @@ class login extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 30,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -68,7 +67,7 @@ class login extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
                           Text(
-                            "Masuk Akun",
+                            "Daftar Akun",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 17,
@@ -114,21 +113,41 @@ class login extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: width * 0.8,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 15),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              labelText: 'Konfirmasi Password',
+                              prefixIcon: Icon(Icons.lock)),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 35),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          SizedBox(
-                            width: width * 0.05,
+                        children: const [
+                          Checkbox(
+                            value: true,
+                            onChanged: null,
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Lupa Password?',
+                          Expanded(
+                            child: Text(
+                              "Dengan klik 'Daftar' saya menyetujui peraturan yang berlaku",
                               style: TextStyle(
                                 color: Colors.grey,
-                                decoration: TextDecoration.underline,
+                                fontSize: 13,
                               ),
                             ),
                           ),
@@ -151,7 +170,7 @@ class login extends StatelessWidget {
                             ),
                           ),
                           child: const Text(
-                            'Login',
+                            'Daftar',
                             style: TextStyle(color: Colors.white, fontSize: 15),
                           ),
                         ),
@@ -160,37 +179,6 @@ class login extends StatelessWidget {
                     SizedBox(
                       height: 1,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 35),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Belum punya akun?",
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Register(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              "Daftar Sekarang",
-                              style: TextStyle(
-                                color: Color(0XFF196276),
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ],

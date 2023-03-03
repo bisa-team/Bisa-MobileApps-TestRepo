@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Image(
                   image: AssetImage("assets/img/Image-background-1.png"),
                 ),
