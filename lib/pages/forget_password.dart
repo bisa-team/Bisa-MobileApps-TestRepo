@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
-import 'forget_password.dart';
 
-class login extends StatelessWidget {
-  const login({Key? key}) : super(key: key);
+class ForgetPassword extends StatelessWidget {
+  const ForgetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,10 +67,11 @@ class login extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
                           Text(
-                            "Masuk Akun",
+                            "Lupa Password?",
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 17,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
@@ -81,21 +80,14 @@ class login extends StatelessWidget {
                     SizedBox(
                       height: height * 0.02,
                     ),
-                    Center(
-                      child: SizedBox(
-                        width: width * 0.8,
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 15),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            labelText: 'Email',
-                            prefixIcon: Icon(Icons.person),
-                          ),
-                        ),
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
+                          "Mohon masukkan email agar kami dapat mengirim email untuk mereset password Anda",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          )),
                     ),
                     SizedBox(
                       height: height * 0.02,
@@ -110,40 +102,13 @@ class login extends StatelessWidget {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
-                              labelText: 'Password',
+                              labelText: 'Email',
                               prefixIcon: Icon(Icons.lock)),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 35),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          SizedBox(
-                            width: width * 0.05,
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ForgetPassword()),
-                              );
-                            },
-                            child: const Text(
-                              'Lupa Password?',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                     SizedBox(
-                      height: 10,
+                      height: 100,
                     ),
                     Center(
                       child: SizedBox(
@@ -158,46 +123,12 @@ class login extends StatelessWidget {
                             ),
                           ),
                           child: const Text(
-                            'Login',
+                            'Kirim Email',
                             style: TextStyle(color: Colors.white, fontSize: 15),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 1,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 35),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Belum punya akun?",
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Register(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              "Daftar Sekarang",
-                              style: TextStyle(
-                                color: Color(0XFF196276),
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ],
