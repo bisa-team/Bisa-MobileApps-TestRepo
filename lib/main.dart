@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double = "v";
+
     return const MaterialApp(
       home: SplashScreen(),
     );
